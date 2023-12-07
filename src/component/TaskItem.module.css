@@ -1,0 +1,116 @@
+ 
+.task {
+    
+  font-size: 17px;
+  border: 0.2em solid #646cff;
+  padding: .6em 0.8em;
+  border-radius: 10px;
+}
+
+ .task-group {
+  display: flex;
+  align-items: center;
+  gap: 2.5em; 
+	justify-content: space-between;
+}
+.ud{
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end; 
+}
+.label {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.4;
+	color: white;
+	text-decoration: line-through; 
+	font-weight: 500;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  appearance: none;
+  border-radius: var(--_radius);
+  width: 1em;
+  height: 1em;
+  background-color: #42479f80;
+  border-radius: 6px;
+  box-shadow:
+    0 0 .5em hsl(300, 76%, 72%/ .2),
+    0 0 0 0.05em hsl(300, 76%, 72%/  .5),
+    0 0 0 -0.2em hsl(300, 76%, 72%/ .3);
+  transition: box-shadow 200ms ease-in-out, background-color 80ms ease-in-out;
+}
+
+.checkbox:focus {
+  outline: none;
+}
+
+.checkbox:hover,
+.checkbox:focus {
+  box-shadow:
+    0 0 0 #646cff,     /* hsl(var(--bg)) */
+    0 0 0 .05em #646cff,     /* hsl(var(--accent)) */
+    0 0 0 .225em rgba(100, 108, 255, 0.3);   /* hsl(var(--accent) / .3) */
+}
+
+.checkmark { 
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  display: grid;
+  place-items: center;
+   top: -0.89rem;
+	left:-3.74em;
+  color: #9ea2eb; 
+	/* border: 1px; */
+  border-radius: 20px;
+  transform: translate3d( 10px),;
+  transition: background-color 80ms ease-in-out;
+}
+
+.checkmark svg {
+  width: .95em;
+  height: .75em;
+	color:white;
+}
+
+.uncheckbox { 
+ display: none;
+}
+
+.unchecbox {
+  text-decoration:   wavy ; 
+}
+
+.delete {
+  --accent: var(--accent1);
+}
+
+.loading {
+  color: hsl(var(--accent));
+  font-size: 19px;
+  font-weight: bold;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.error {
+  color: hsl(var(--accent1));
+  font-size: var(--_size);
+  text-align: center;
+}  

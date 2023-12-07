@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+  
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.todo {
+  display: flex;
+  gap: 0.5em;
+  font-size: var(--_size);
+  text-align: left;
+	/* background-color: red; */
+}
+
+.wrapper {
+   
+  position: relative;
+  display: grid;
+	grid-template-columns: 100% 100%;
+  gap: 1.2em;
+}
+header{
+	font-size: 25px;
+	font-weight: 800;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input {
+	position: relative;
+	border: none;
+	border-bottom: 0.125rem solid #646cff;
+	 
+	height: 1.3rem;
+	font-size: 1.0625rem; 
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+	padding-left: 10px;
+}
+input:focus {
+	outline: none;
+}
+input:hover{
+	background-color: #bec1ef44;
+}
+.label { 
+		text-transform: uppercase;
+		font-size: 0.7em;
+		pointer-events: none;
+		letter-spacing: 0.05em;
+		margin-inline: 0.45em;
+		position: absolute;
+		top: 30%;
+		transform: translateY(-50%);
+		padding: 0.1em 0.35em;
+}
+input:focus + .label, input:valid + .label {
+	top: -1rem;
+	font-size: 0.6375rem;
+	margin-bottom: 12px;;
+	color: #646cff5a;
+}
