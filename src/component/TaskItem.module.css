@@ -22,13 +22,17 @@
   position: relative;
   cursor: pointer;
   text-align: left;
-  line-height: 1.4;
+  line-height: .4em;
+	padding: 0 14px;
 	color: white;
 	text-decoration: line-through; 
 	font-weight: 500;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+.checki{ 
+    display: flex;
+    align-items: center;
+}
 .checkbox {
   flex-shrink: 0;
   appearance: none;
@@ -58,18 +62,18 @@
 
 .checkmark { 
   content: '';
-  position: absolute;
-  width: 1em;
-  height: 1em;
-  display: grid;
-  place-items: center;
-   top: -0.89rem;
-	left:-3.74em;
-  color: #9ea2eb; 
-	/* border: 1px; */
-  border-radius: 20px;
-  transform: translate3d( 10px),;
-  transition: background-color 80ms ease-in-out;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    display: grid;
+    place-items: center;
+    top: -1.29rem;
+    left: -1.194em;
+    color: #9ea2eb;
+    /* border: 1px solid; */
+    border-radius: 20px;
+    transform: translate3d(0px, -3px, -1px);
+    transition: background-color 80ms ease-in-out;
 }
 
 .checkmark svg {

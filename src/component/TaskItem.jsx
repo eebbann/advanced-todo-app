@@ -1,12 +1,12 @@
 import { CheckIcon, PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline';
 import React, { useState } from 'react';
 import styles from './TaskItem.module.css';
-function TaskItem({ task, handleDelete }) {
+function TaskItem({ task, handleDelete, enterEditedTask }) {
 	const [checked, setChecked] = useState(task.checked);
 
 	const handleCheckedSubmit = () => {
-		console.log(checked);
-		setChecked(!checked);
+		console.log(task);
+		setChecked(!checked); 
 	};
 
 
@@ -15,7 +15,8 @@ function TaskItem({ task, handleDelete }) {
 
 		<li className={styles.task}>
 			<div className={styles["task-group"]}>
-				<input type="checkbox"
+				<div className={styles.checki}>
+					<input type="checkbox"
 					checked={task.checked}
 					onChange={handleCheckedSubmit}
 					id={task.id}
@@ -29,9 +30,12 @@ function TaskItem({ task, handleDelete }) {
 						<CheckIcon strokeWidth={2} width={24} height={24} />
 					</p>
 				</label>
+				</div>
+				
 				<div className={styles.ud}>
-					<button className="btn"
-					//  onClick={}
+					<button className="btn" aria-label={`Update ${task.name} Task`}
+					 onClick={()=> {console.log(task);
+						enterEditedTask(task)}}
 					>
 						<PencilSquareIcon widgth={20} height={20} />
 					</button>
